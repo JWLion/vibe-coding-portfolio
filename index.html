@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan 포트폴리오</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-3d {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            text-shadow: 
+                0 0 10px rgba(236, 72, 153, 0.5),
+                0 0 20px rgba(236, 72, 153, 0.3),
+                0 0 30px rgba(236, 72, 153, 0.2);
+            background: linear-gradient(45deg, #ec4899, #f472b6, #ec4899);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient 3s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .skill-circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 4px;
+        }
+        
+        .skill-filled {
+            background-color: #10b981;
+        }
+        
+        .skill-empty {
+            background-color: transparent;
+            border: 2px solid #374151;
+        }
+        
+        .section-badge {
+            background-color: #ec4899;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        .checkpoint-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .checkpoint-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        .dot-green { background-color: #10b981; }
+        .dot-orange { background-color: #f97316; }
+        .dot-blue { background-color: #3b82f6; }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #ec4899;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-inter min-h-screen">
+    <!-- Header Section -->
+    <header class="relative min-h-screen flex flex-col justify-center items-center px-4">
+        <div class="absolute top-4 left-4 text-sm text-gray-400">©2025</div>
+        
+        <div class="text-center">
+            <h1 class="text-2xl md:text-3xl font-light mb-4">Welcome to My</h1>
+            <h2 class="font-3d text-6xl md:text-8xl lg:text-9xl mb-8">PORTFOLIO</h2>
+        </div>
+        
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-sm text-gray-400">@lovie_artwork</div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="px-4 py-12 max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+            <!-- Left Column - About Me -->
+            <div class="text-center lg:text-left">
+                <h3 class="font-3d text-4xl md:text-5xl mb-8">ABOUT ME</h3>
+                
+                <img src="https://images.unsplash.com/photo-1552410260-0fd9b577afa6?w=300&h=300&fit=crop&crop=face" 
+                     alt="Ryan 프로필" 
+                     class="profile-image">
+                
+                <h4 class="text-2xl md:text-3xl font-semibold mb-2">Ryan</h4>
+                <p class="text-lg text-gray-300 mb-8">Graphic Designer</p>
+            </div>
+
+            <!-- Right Column - Details -->
+            <div class="space-y-8">
+                <!-- Motto Section -->
+                <div>
+                    <h5 class="text-xl md:text-2xl font-semibold text-pink-400 mb-4">낯설게, 대담하게, 즐겁게.</h5>
+                    <p class="text-gray-300 leading-relaxed">
+                        익숙함에 질문을 던지고 낯선 것에서 영감을 찾습니다. 틀에 갇히지 않고, 직관에 상상력을 더해 대담한 시도를 합니다. 
+                        새로움은 즐거운 상상에서 시작되며 그 상상이 현실이 되는 과정을 디자인으로 풀어냅니다. 
+                        낯설게, 대담하게, 즐겁게 움직이는 저는 새로운 감각을 시각화하는 디자인을 만들어갑니다.
+                    </p>
+                </div>
+
+                <!-- Check Point Section -->
+                <div>
+                    <div class="section-badge">Check Point</div>
+                    <div class="space-y-3">
+                        <div class="checkpoint-item">
+                            <div class="checkpoint-dot dot-green"></div>
+                            <span>상세페이지 기획 및 제작 경력</span>
+                        </div>
+                        <div class="checkpoint-item">
+                            <div class="checkpoint-dot dot-orange"></div>
+                            <span>SNS 및 바이럴 콘텐츠 디자인</span>
+                        </div>
+                        <div class="checkpoint-item">
+                            <div class="checkpoint-dot dot-blue"></div>
+                            <span>제품 및 모델 촬영 기획 및 디렉팅</span>
+                        </div>
+                        <div class="checkpoint-item">
+                            <div class="checkpoint-dot dot-green"></div>
+                            <span>3D 그래픽 제작 가능</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div>
+                    <div class="section-badge">Skills</div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-300">Photoshop</span>
+                            <div>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-300">Illustrator</span>
+                            <div>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-300">Cinema 4D</span>
+                            <div>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-empty"></span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-300">Octane</span>
+                            <div>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-300">After Effect</span>
+                            <div>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                                <span class="skill-circle skill-filled"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <div>
+                    <div class="section-badge">Education</div>
+                    <div class="space-y-2">
+                        <p class="text-gray-300">2021.03 - 2025.02 명지대학교 멀티디자인</p>
+                        <p class="text-gray-300">2015.03 - 2018.02 홍익디자인고등학교</p>
+                    </div>
+                </div>
+
+                <!-- Certificate Section -->
+                <div>
+                    <div class="section-badge">Certificate</div>
+                    <div class="space-y-2">
+                        <p class="text-gray-300">2017.08 경영능력시험(MAT)</p>
+                        <p class="text-gray-300">컴퓨터그래픽기능사</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Contact Section -->
+    <footer class="bg-gray-900 py-8 mt-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-gray-400 mb-4">Contact Me</p>
+            <div class="flex justify-center space-x-6">
+                <a href="mailto:lovie_artwork@example.com" class="text-pink-400 hover:text-pink-300 transition-colors">
+                    Email
+                </a>
+                <a href="https://instagram.com/lovie_artwork" class="text-pink-400 hover:text-pink-300 transition-colors">
+                    Instagram
+                </a>
+                <a href="#" class="text-pink-400 hover:text-pink-300 transition-colors">
+                    Portfolio
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add scroll effect to header
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * -0.5;
+                
+                if (header) {
+                    header.style.transform = `translateY(${rate}px)`;
+                }
+            });
+
+            // Add fade-in animation for sections
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe main content sections
+            const sections = document.querySelectorAll('main > div > div');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+
+            // Add hover effects for interactive elements
+            const badges = document.querySelectorAll('.section-badge');
+            badges.forEach(badge => {
+                badge.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.transition = 'transform 0.2s ease';
+                });
+                
+                badge.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            // Add click effect for profile image
+            const profileImage = document.querySelector('.profile-image');
+            if (profileImage) {
+                profileImage.addEventListener('click', function() {
+                    this.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 200);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
