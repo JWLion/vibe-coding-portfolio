@@ -21,6 +21,8 @@
 
 ```
 ├── index.html          # 메인 HTML 파일
+├── styles.css          # CSS 스타일시트
+├── script.js           # JavaScript 파일
 └── README.md          # 프로젝트 설명서
 ```
 
